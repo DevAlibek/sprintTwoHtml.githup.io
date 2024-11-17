@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK Profile</title>
+    <style>
+        body {
+            background-color: #e8eaed;
+            box-sizing: border-box;
+            color: black;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            /* justify-content: space-between; */
+            
+            align-items: center;
+            background-color: #4277a5;
+            height: 60px;
+            padding: 10 20px;
+            
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 275px;
+        }
+
+        .search {
+            border-radius: 10px;
+            background-color: #2c4869;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            outline: none;
+            margin-left: 100px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .menu {
+            margin-bottom: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #00456b;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #4277a5;
+        }
+
+        .content-second {
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-foto img {
+            object-fit: cover;
+            width: 230px;
+            height: 230px;
+            border-radius: 10px;
+        }
+
+        .content-foto button {
+            width: 230px;
+            background-color: #e8eaed;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .content-foto button:hover {
+            background-color: #d4d6d9;
+        }
+
+        .friends {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .friends-foto {
+            border-radius: 50%;
+            object-fit: cover;
+            width: 50px;
+            height: 50px;
+        }
+
+        .friend-item {
+            text-align: center;
+            font-size: 14px;
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .profile-info {
+            display: flex;
+            flex-direction: row;
+            font-size: 14px;
+
+        }
+        
+        .main-profile{
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-left: 20px;
+        }
+        .profile-status{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .profile-data-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .profile-data {
+        text-align: center;
+        max-width: 100px;
+        }
+        .profile-data-text {
+        font-size: 12px;
+        color: #00456b;
+        }
+        .profile-data-number {
+        font-size: 18px;
+        color: #00456b;
+        } 
+        .my-photos {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: nowrap; 
+            gap: 10px;
+            overflow-x: auto;
+        }
+
+        .my-photo img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .comment-logo-photo{
+            border-radius: 50%;
+            object-fit: cover;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">VK</div>
+        <div>
+            <input class="search" type="search" placeholder="Поиск">
+        </div>
+    </div>
+
+    <div class="content">
+        <div style="display: flex; flex-direction: column; padding-right: 20px;">
+            <div class="menu"><a href="#">Моя страница</a></div>
+            <div class="menu"><a href="#">Новости</a></div>
+            <div class="menu"><a href="#">Сообщения</a></div>
+            <div class="menu"><a href="#">Друзья</a></div>
+            <div class="menu"><a href="#">Группы</a></div>
+            <div class="menu"><a href="#">Фотографии</a></div>
+            <div class="menu"><a href="#">Музыка</a></div>
+            <div class="menu"><a href="#">Видео</a></div>
+        </div>
+        <div style="width: 17%;">
+            <div class="content-second">
+                <div class="content-foto">
+                    <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2179660084.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="Profile Photo">
+                </div>
+                <div class="content-foto">
+                    <button>Редактировать</button>
+                </div>
+            </div>
+
+            <br>
+            <div class="content-second">
+                <div>Друзья 1331</div>
+                <div class="friends">
+                    <div class="friend-item">
+                        <img class="friends-foto" src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2179660084.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="Friend 1">
+                        <div>Бекбол</div>
+                    </div>
+                    <div class="friend-item">
+                        <img class="friends-foto" src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2179660084.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="Friend 2">
+                        <div>Tima</div>
+                    </div>
+                    <div class="friend-item">
+                        <img class="friends-foto" src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2179660084.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="Friend 3">
+                        <div>Crocs</div>
+                    </div>
+                </div>
+                <br>
+                <div class="friends">
+                    <div class="friend-item">
+                        <img class="friends-foto" src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2179660084.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="Friend 1">
+                        <div>Бекбол</div>
+                    </div>
+                    <div class="friend-item">
+                        <img class="friends-foto" src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2179660084.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="Friend 2">
+                        <div>Tima</div>
+                    </div>
+                    <div class="friend-item">
+                        <img class="friends-foto" src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2179660084.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="Friend 3">
+                        <div>Crocs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style=" width: 40%;">
+            <div  class= "main-profile">
+                <div class="profile-status">
+                    <h2 style=" font-size: 18px; color: #00456b;">Ilyas Zhuanyshev<br /><span style="font-size: 14px;">Life is good :)</span></h2>
+                    <p style="font-size: 12px;">Online</p>
+                </div>
+                <hr style="margin: 10px 0; ">
+                <div style="width: 300px; display: grid; grid-template-columns: 200px 1fr; gap: 5px;">
+                    <div style="color: #4277a5;">День рождения:</div>
+                    <div style="color: #00456b;">26 мая 1989 г.</div>
+                    
+                    <div style="color: #4277a5;">Город:</div>
+                    <div style="color: #00456b;">Алматы</div>
+                    
+                    <div style="color: #4277a5;">Семейное положение:</div>
+                    <div style="color: #00456b;">женат</div>
+                    
+                    <div style="color: #4277a5;">Место работы:</div>
+                    <div style="color: #00456b;">BITLAB Academy</div>
+                    
+                    <div style="color: #4277a5;">Веб-сайт:</div>
+                    <div><a style="text-decoration: none; color: #00456b;" href="http://www.zhuanyshev.kz">http://www.zhuanyshev.kz</a></div>
+                </div>
+                <hr style="margin: 10px 0; ">
+                <div class="profile-data-list">
+                    <div class="profile-data">
+                        <div class="profile-data-number">1 331</div>
+                        <div class="profile-data-text">друг</div>
+                    </div>
+                    <div class="profile-data">
+                        <div class="profile-data-number">224</div>
+                        <div class="profile-data-text">подписчика</div>
+                    </div>
+                    <div class="profile-data">
+                        <div class="profile-data-number">95</div>
+                        <div class="profile-data-text">фотографии</div>
+                    </div>
+                    <div class="profile-data">
+                        <div class="profile-data-number">969</div>
+                        <div class="profile-data-text">видеозаписей</div>
+                    </div>
+                    <div class="profile-data">
+                        <div class="profile-data-number">809</div>
+                        <div class="profile-data-text">аудиозаписей</div>
+                    </div>
+                    <div class="profile-data">
+                        <div class="profile-data-number">140</div>
+                        <div class="profile-data-text">страниц</div>
+                    </div>
+                </div>     
+            </div>
+            <br>
+            <div  class= "main-profile">
+                <div>Мои фотографии <span>95</span></div>
+                <div class="my-photos">
+                    <div class="my-photo">
+                        <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2179660084.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="">
+                    </div>
+                    <div class="my-photo">
+                        <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2179660084.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="">
+                    </div>
+                    <div class="my-photo">
+                        <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2179660084.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="">
+                    </div>
+                    <div class="my-photo">
+                        <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2179660084.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="">
+                    </div>
+                    <div class="my-photo">
+                        <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2179660084.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="main-profile ">
+                <div>
+                    <div style="display: flex; justify-content: flex-start;">
+                        <div><img class="comment-logo-photo" src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2179660084.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="">
+                        </div>
+                        
+                        <div style="color: #00456b;">Ilyas Zhuanyshev<br><span>17 ноя в 11:12</span></div>
+                    </div>
+                    <div class="comment-text">
+                        This section contains a gallery of images displayed in a horizontal row. 
+                        The images are wrapped in a flex container with no wrapping, ensuring they stay 
+                        in a single line. If there are too many images, the container will allow horizontal 
+                        scrolling. Each image is resized to 100px by 100px to maintain consistent layout 
+                        and avoid distortion. The "object-fit" property ensures that the images maintain 
+                        their aspect ratio while filling the allocated space.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
